@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function remove(arr,item){
+        var sc = []
+        for(var i = 0;i<arr.length;i++){
+            // 这里加()的意思就是提升arr[i]==item的优先级，如果不加!的话，那么!就会直接作用到arr[i]的身上，最后得出的结果就为空数组
+            if(!(arr[i]== item)){
+                sc.push(arr[i])
+            }
+        }
+        return sc
+    }
+    console.log(remove([1,2,3,4,5,5,5,6],5));
+</script>
+</body>
+</html>

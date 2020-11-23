@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  function Person(uname, age) {
+    this.uname = uname
+    this.age = age
+  }
+ 
+  var p1 = new Person('zs', 16)
+  Person.prototype = {
+    say: function () {
+      console.log('123')
+    }
+  }
+  // Person.prototype =p1.__proto__
+  // Person.prototype =p1.__proto__
+  // var p1 = new Person('zs',16)
+  // Person的原型prototype属性是否在p1对象实例的原型链上吗？
+  console.log(p1)
+  console.log(p1 instanceof Person)
+
+</script>
+
+</html>

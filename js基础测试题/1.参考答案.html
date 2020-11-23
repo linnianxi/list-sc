@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+// 一、选择题答案：（每题2分，多选题错选、少选不得分）
+
+// 1、B
+// 2、CD
+// 3、B
+// 4、B
+// 5、C
+// 6、B
+// 7、ABCDE
+// 8、B
+// 9、B
+// 10、D
+// 11、C
+// 12、第一次弹（ A ）第二次弹（ D ）
+// 13、B
+// 14、A
+// 15、C
+// 16、B
+// 17、C
+// 18、D
+// 19、ABC
+// 20、第一次弹（ A ），第二次弹（ A ），第三次弹（ B ）
+// 21、第一次弹（ D ），第二次弹（ D ）
+// 22、arr 的结果为（ A ），arr2 的结果为（ C ）
+// 23、A
+// 24、按顺序分别弹出（ B ），（ A ），（ B ）
+// 25、C
+// 26、D
+// 27、A
+// 28、Math.ceil(-3.14) 的结果是（ B ），Math.floor(-3.14) 的结果是（ C ）
+// 29、B
+// 30、A
+
+// 二、问答题答案：（每题8分）
+
+// 1、找到数组 [-1, -2, 1, 10, 4, 5, 8] 中的最大值，至少写出两种方法？
+
+// var arr = [-1, -2, 1, 10, 4, 5, 8];
+
+// // 第一种
+// var max1 = Math.max.apply(null, arr);
+
+// // 第二种
+// var max2 = arr.sort(function(a, b){
+//     return b - a;
+// })[0];
+
+// // 第三种
+// var max3 = -Infinity;
+// for (var i = 0; i < arr.length; i++) {
+//     if (max3 < arr[i]) {
+//         max3 = arr[i];
+//     }
+// }
+
+
+
+// 2、封装一个函数，将字符串 "miao-wei-ke-tang" 从第二个单词开始首字母大写，然后拼成字符串 miaoWeiKeTang，并返回。（注意：封装成一个函数）
+
+// var str = 'miao-wei-ke-tang';
+
+// function toTuoFeng(str) {
+//     var arrStr = str.split('-');
+//     for (var i = 1; i < arrStr.length; i++) {
+//         arrStr[i] = arrStr[i].substr(0, 1).toUpperCase() + arrStr[i].substr(1);
+//     }
+//     return arrStr.join('');
+// }
+
+// console.log(toTuoFeng(str));
+
+
+
+// 3、封装一个函数，将字符串 "      miao  v        " 实现 trim 的功能，但不使用 trim 方法，去掉字符串前后空格，返回处理后的字符串。
+
+// var str = '   miao v         ';
+
+// // 第一种方法
+// function trim(str) {
+//     var start, end;
+//     for (var i=0; i < str.length; i++) {
+//         if (str[i] !== '') {
+//             start = i;
+//             break;
+//         }
+//     }
+//     for (var i = str.length-1; i >= 0; i--) {
+//         if (str[i] !== '') {
+//             end = i;
+//             break;
+//         }
+//     }
+//     return str.substring(start, end + 1);
+// }
+
+// // 第二种方法
+// function trim(str) {
+//     var start = 0, end = str.length - 1;
+//     while(start < end && str[start] == '') {
+//         start++;
+//     }
+//     while(start < end && str[end] == '') {
+//         end--;
+//     }
+//     return str.substring(start, end + 1);
+// }
+
+// console.log(trim(str));
+
+
+
+// 4、写一个方法，找出字符串 "abcabcabcabcabcabda" 中 "ab" 出现的次数和位置。
+
+// var str = 'abcabcabcabcabcabda';
+// var arr = [];
+// var n = 0;
+// while(str.indexOf('ab',n) != -1 && n < str.length) {
+//     arr.push(str.indexOf('ab', n));
+//     n = str.indexOf('ab', n) + 2;
+// }
+// console.log(arr);
+
+
+
+// 5、请用 JS 代码完成下列需求：body 里生成 100 个 div，每个 div 宽 100px，高 100px，内容是 1-100 自身序号，颜色按红、黄、蓝、绿交替变色，10 行 10 列排列。
+
+// - CSS -
+// .box { position:relative; }
+// .box div { width: 60px; height: 60px; position: absolute; }
+
+// - HTML -
+// < div class="box"></div>
+
+// - JavaScript -
+// var box = document.getElementsByTagName('div')[0];
+// var str = '';
+// var arr = ['red', 'yellow', 'blue', 'green'];
+
+// for (var i = 0; i < 100; i++) {
+//     str += ' < div style="left:' + i%10*60 + 'px; top:' + Math.floor(i/10)*60 + 'px; background:' + arr[i%arr.length] + ';">' + (i+1) + '</div>';
+// }
+// box.innerHTML += str;
+
+// 当然答案还有很多，我们只是提供了其中几种
+
+
+
+</script>
+
+</html>

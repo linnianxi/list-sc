@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>电话号码管理平台</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div>
+        <!-- 导航条 -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">超级电话管理</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">首页 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">欠费管理</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">大客户服务</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <!-- 大标题 -->
+            <h1>电话管理</h1>
+            <div class="form-inline">
+                <!-- 添加按钮 -->
+                <button class="btn btn-lg btn-success mr-2 button-add" data-toggle="modal" data-target="#addModal">
+                    <svg class="bi bi-plus" width="1.2em" height="1.2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z"></path>
+                        <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z"></path>
+                    </svg>添加</button>
+                <!-- 搜索框 -->
+                <div class="form-group mr-2">
+                    <input type="text" class="form-control form-control-lg textbox-search" />
+                </div>
+                <button class="btn btn-lg btn-info button-search">
+                    <svg class="bi bi-search" width="1.2em" height="1.2em" viewBox="0 0 16 16" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"></path>
+                        <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"></path>
+                    </svg>搜索</button>
+            </div>
+
+            <!-- 表格区域 -->
+            <table class="table mt-2">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">姓名</th>
+                        <th scope="col">电话号码</th>
+                        <th scope="col">用户状态</th>
+                        <th scope="col">操作</th>
+                    </tr>
+                </thead>
+                <tbody class="myTbody">
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 添加模态框 -->
+        <div class="modal add-modal fade" tabindex="-1" role="dialog" id="addModal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">添加用户</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group row">
+                            <label for="uname" class="col-sm-3 col-form-label">姓名</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="uname" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="tel" class="col-sm-3 col-form-label">电话号码</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="tel" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closed">关闭</button>
+                        <button type="button" class="btn btn-primary button-user-add">添加</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 修改模态框 -->
+        <div class="modal edit-modal fade" tabindex="-1" role="dialog" id="editModal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">修改用户</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group row">
+                            <label for="nickName" class="col-sm-3 col-form-label">姓名</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="nickName" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="newTel" class="col-sm-3 col-form-label">电话号码</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="newTel" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary button-user-save">修改</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- 请编写 -->
+    <!-- index是动态添加的js -->
+    <!-- <script src="./js/index.js"></script> -->
+     <!-- index1是动态添加的删除保存装态功能 -->
+    <!-- <script src="./js/index1.js"></script> -->
+    <!-- 关键字搜索，修改列表 -->
+    <script src="./js/index2.js"></script>
+</body>
+
+</html>

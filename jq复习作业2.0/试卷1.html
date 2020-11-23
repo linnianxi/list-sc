@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+
+
+
+<script>
+//   一．选择题
+
+// 1. 下面哪种不是jquery的选择器?(  )  C。
+
+// A、基本选择器                          B、层次选择器
+
+// C、css选择器                                   D、表单选择器
+
+// 2. 当DOM加载完成后要执行的函数，下面哪个是正确的?(  )  C
+
+// A、jQuery(expression, [context])  B、jQuery(html,[ownerDocument])
+
+// C、jQuery(callback)                        D、jQuery(elements)
+
+// 3. 下面哪一个是用来追加到指定元素的末尾的?(  )     C
+
+// A、insertAfter()  B、append()    C、appendTo()  D、after()
+
+// 4. 下面哪一个不是jquery对象访问的方法? (  ) D
+
+// A、each()          B、size()           C、.length                    D、onclick()
+
+// 5. 在jquery中想要找到所有元素的同辈元素，下面哪一个是可以实现的？（） C
+// A、eq(index)       B、find(expr)       C、siblings([expr])        D、next() 
+
+// 6. 如果需要匹配包含文本的元素，用下面哪种来实现? (  )  B
+
+// A、text()             B、contains()     C、input()          D、attr(name)
+
+// 7. 如果想要找到一个表格的指定行数的元素，用下面哪个方法可以快速找到指定元素? ( C)
+
+// A、text()             B、get()                     C、eq()                      D、contents( )
+
+// 8. 下面哪种不属于jquery的筛选? (  ) B
+
+// A、过滤               B、自动               C、查找               D、串联
+
+// 9. 下面哪几种是属于jquery文档处理的?  (多选)  ABCD
+
+// A、包裹               B、替换               C、删除               D、内部和外部插入
+
+// 10. 如果想被选元素之后插入 HTML 标记或已有的元素，下面哪个是实现该功能的?  (  ) D
+
+// A、append(content)                            B、 appendTo(content)
+
+// C、insertAfter(content)                        D、after(content)
+
+// 11. 在jquey中，如果想要从DOM中删除所有匹配的元素，下面哪一个是正确的?( ) C
+
+// A、delete()         B、empty()                C 、remove()            D、removeAll()
+
+// 12. 在jquery中，想要给第一个指定的元素添加样式，下面哪一个是正确的? (  )        D
+
+// A、first               B、eq(1)                   C、css(name)     D、css(name,value)
+
+// 13. 在jquery中，如果想要获取当前窗口的宽度值，下面哪个是实现该功能的?  ( )  A
+
+// A、width()          B、width(val)            C、width            D、innerWidth()
+
+// 14. 为每一个指定元素的指定事件(像click) 绑定一个事件处理器函数，下面哪个是用来实现该功能的?  (  ) B
+
+// A、trgger (type)       B、bind(type)           C、one(type)             D、bind
+
+// 15. 在jquery中想要实现通过远程http get请求载入信息功能的是下面的哪一下事( C )
+
+// A、$.ajax()                  B、load(url)                C、$.get(url)               D$. getScript(url)
+
+// 16. 在一个表单中，如果想要给输入框添加一个输入验证，可以用下面的哪个事件实现? ( D)
+
+//       A、hover(over ,out) B、keypress (fn)       C、change()       D、change(fn)
+
+// 17. 当一个文本框中的内容被选中时，想要执行指定的方法时，可以使用下面哪个事件来实现? (  )  C
+
+//       A、click(fn)               B、change(fn)           C、select(fn)              D、bind(fn)
+
+// 18.以下 jquery 对象方法中，使用了事件委托的是(   )  D
+// A、bind                       B. 、mousedown        C、change          D、on
+
+// 19.元素的type属性的取值可以是（多选）ABD
+// A、image                    B、checkbox       C、select             D、button
+
+// 20.下列jQuery事件绑定正确的是____。A
+// A. bind(type,[data],function(eventObject))
+// B. $(‘#demo’).click(function() {})
+// C. $(‘#demo’).on(‘click’,function() {})
+// D. $(‘#demo’).one(‘click’,function() {})
+
+// 21.怎么才能隐藏下面的元素？  C
+// <input id=”id_txt” name=”txt” type=”text”value=””/>
+// A. $(“id_txt”).hide();
+// B. $(#id_txt).remove();
+// C. $(“#id_txt”).hide();
+// D. $(“#id_txt”).remove();
+
+// 22. jQuery 的方法get()做什么？A
+// A.使用 HTTP GET 请求从服务器加载数据
+
+// B. 返回一个对象
+// C. 返回存在jQuery对象中的DOM元素
+// D. 触发一个get AJAX请求
+
+// 23. 在jQuery中
+
+//   $( '#hello' ).css ( "color"，"#f0000" )
+
+// $( '#hello' ).css ( "color"" )
+
+// 分别表示的含义是:  (多选)  AB
+
+// A.  $(‘#hello’).css("color",#0000)表示选择id为hello 的元素，并设置颜色为"f0000"
+
+//   $( '#hello' ).css ( "color"" )表示选择id为hello 的元素，并且取到该元素字体显示的颜色
+
+//   $(‘#hello' )css("color""f0000"表示选择CSS类为hello的元素，并且取到该元素字体显示的颜色
+
+// D.  $('hello')css("color")表示选择CSS类为hello 的元素，并且取到该元素字休显示的颜色
+
+// 24. 在jquery中，选择使用myClass类的css的所有元素( )A
+
+// A、$(".myClass")       B. 、$("#myClass")          C、${*}                D、${‘body’}
+
+// 25. 在jquery中指定一个类，如果存在就执行删除功能，如果不存在就执行添加功能，下面哪一个是可以直接完成该功能的？（） C
+
+// A、removeClass()     B、deleteClass()       C、toggleClass(class) D.addClass()
+
+// 26. JQuery中，属于鼠标事件方法的选项是(   ) B
+
+// A. onclick( )                B. mouseover( )         C. onmouseout( )        D. blur( )
+
+// 27. 在Jquery中，既可绑定两个或多个事件处理器函数，以响应被选元素的轮流的 click 事件，又可以切换元素可见状态的方法是(   )      B
+
+// A.. hide( )                   B. toggle( )                 C. hover( )                  D.slideUp( )\
+
+// 28. 关于bind( )方法与unbind( )方法说法正确的是(  多选  )  BC D
+
+// A.  bind( )方法可用来移除单个或多个事件
+// B   unbind( )方法可以移除所有的或被选的事件处理程序
+// C.  使用bind( )方法可绑定单个或多个事件
+
+// D. unbind( )方法是与bind( )方法对应的方法
+
+// 29. 在Jquery中，关于fadeIn()方法正确的是(   )  B
+
+// A. 可以改变元素的高度
+
+// B  可以逐渐改变被选元素的不透明度，从隐藏到可见（褪色效果）
+
+// C  可以改变元素的宽度
+
+// D  与fadeIn( )相对的方法是fadeOn( )
+
+// 30. 下面选项中（）能获得焦点 A
+
+//        A.blur()               B.select()                           C.docus()            D.onfocus()
+
+// 31. (   )能够动态改变层中的提示内容 A
+
+// A利用html( )方法                    B.利用层的id属性
+
+// C.使用onblur事件                   D.使用display属性
+
+// 32. 在jQuery中，通过jQuery对象.css( )可实现样式控制，以下说法正确的是(多选) AB
+
+// A. css( )方法会去除原有样式而设置新样式
+
+// B. 正确语法：css(“属性”,”值”)
+
+// C. css( )方法不会去除原有样式
+
+// D. 正确语法：css(“属性”)
+
+// 33. 下列选项中,不属于键盘事件的是(   )。D
+
+// A.keydown                 B.keyup                     C.keypress          D.ready
+
+// 34. 以下jQuery代码运行后，对应的HTML代码变为(  )       B
+
+// HTML代码：<p>你好</p>
+
+// jQuery代码：$(“p”).append(“<b>快乐编程</b>”);
+
+// A. <p>你好</p><b>快乐编程</b>
+
+// B. <p>你好<b>快乐编程</b></p>
+
+// C. <b>快乐编程</b><p>你好</p>
+
+// D. <p><b>快乐编程</b>你好</p>
+
+// 35下列选项中,有关数据验证的说法中正确的是(   )。D
+
+// A.使用客户端验证可以减轻服务器压力
+
+// B.客观上讲，使用客户端验证也会受限于客户端的浏览器设置。
+
+// C. 基于JavaScript的验证机制正是将服务器的验证任务转嫁至客户端，有助于合理使用资源。
+
+// D. 以上说法均正确
+
+// 36. 以下关于Jquery优点的说法中错误的是(   ) C
+
+// A.jquery的体积较小，压缩以后，大约只有100kb
+
+// B.jquery封装了大量的选择器、DOM操作、事件处理，使用起来比JavaScript简单得多
+
+// C.jquery的浏览器兼容很好，能兼容所有的浏览器
+
+// D.jquery易扩展，开发者可以自己编写jquery的扩展插件
+
+// 37. 在Jquery中，下列关于DOM操作的说法错误的是(   ) AC
+
+// A.$(A).append(B)表示将A追加到B中
+
+// B.$(A).appendTo(B)表示把A追加到B中
+
+// C.$(A).after(B)表示将A插入到B以后
+
+// D.$(A).insertAfter(B)表示将A插入到B以后
+
+// 38. 以下()函数不是jQuery内置的与AJAX相关的函数。D
+
+// A、 $.ajax()        B.$.get()              C.$.post()                   D.$.each()
+
+// 39.  以下()选项不能够正确地得到这个标签:( ) B
+
+// <input id="btnGo"type=”buttom” value=”点击”class=”btn”>
+
+// A.$(“#btnGo”)                      B.$(“.btnGo”)        
+
+// C.$(“.btn”)                            D.$(“input[type=’button’]”)
+
+// 40. 以下关于jQuery的描述错误的是（）D
+
+// A.jQuery是一个javascript函数库
+
+// B. jQuery极大地简化了JavaScript编程
+
+// C. jQuery的宗旨是“write less,do more”
+
+// D. jQuery的核心功能不是根据选择器查找HTML元素，然后对这些元素执行相关的操作。
+
+// 41. 在jQuery中被誉为工厂函数的是（）C
+
+//        A.ready(）           B.function（）           C。$()                  D.next( )
+
+// 二．填空题
+
+// 1.  jquery访问对象中的size()方法的返回值和jQuery对象的______属性一样.  length
+
+// 2.  jquery中$(this).get(0)的写法和_______是等价的。$(this)[0])
+
+// 3.  现有一个表格，如果想要匹配所有行数为偶数的，用___实现，奇数的用_____实现
+
+//        even  odd
+
+// 4.  在一个表单里，想要找到指定元素的第一个元素用____实现，那么第二个元素用_____
+
+//  实现。 first      eq(1)
+
+// 5.  在jquery 中，用一个表达式来检查当前选择的元素集合，使用_____来实现，如果这个表达式失效，则返回____值。   is(expr)  false
+
+// 6.  在编写页面的时候，如果想要获取指定元素在当前窗口的相对偏移，用____来实现，该方法的返回值有两个属性，分别是____和_____ offset,  top,    left
+
+// 7.  在一个表单中，如果将所有的div元素都设置为绿色，实现功能是_______ $( “div”).css( “color”,”green'  )
+
+// 8.  在jquery 中,当鼠标指针悬停在被选元素上时要运行的两个方法，实现该操作的是_____         $(selector).hover(inFunction,outFunction)
+
+// 9.  在jquery中，想让一个元素隐藏，用_____实现，显示隐藏的元素用____实现
+
+// hide(),    show()
+
+// 10.  在div元素中,包含了一个<span>元素,通过has选择器获取<div>元素中的<span>元素的语法是____   $("div:has(span)");
+
+// 11.  在<ul>元素中,添加了多个<li>元素,通过jquery选择器获取最后一个<li>元素的方法是______   $("li:last")
+
+// 12.  在三个<ul>元素中,分别添加多个<li>元素,通过jQuery中的子元素选择器,将这三个<ul>元素中的第一个<li>元素隐藏,代码是______ $("li:first-child").hide();
+
+// 13.  在页面的表单中增加了多个<input>类型的复选框元素,其中有的处于选中状态,通过jQuery选择器,将这些选中状态的元素隐藏,代码为_____     $("forminput:checked").hide()
+
+// 14. 在ajax中data主要有______.  _______ . ___________三种方式   html拼接的，json数组，form表单经serialize()序列化的
+
+// 15.  ______方法用于模拟光标悬停事件   hover()
+
+// 16.  jQuery中提供了__________方法可以停止冒泡 stopPropagation()
+
+// 17.  可以用_______,阻止这些默认的行为例如单击超链接后会自动跳转，单击"提交"按钮后表单会提交等    event.preventDefault()
+
+// 18.  formData:返回一个________，可以通过循环调用来校验    数组
+
+// 19.  jQuery的______可以给现在元素附加新的元素   html()
+
+// 20.  jQuery中的选择器大致分为:________ . ________ ._____ .___________
+
+// 基本选择器，层次选择器，过滤选择器，表单选择器
+
+// 21.  _______方法用于处理命名冲突  conflict()
+
+// 三．判断题
+
+// 1.  window.onload必须等到页面内包括图片的所有元素加载完毕后才能执行（✔）
+
+// 2.  on()方法在被选元素及子元素上添加一个或多个事件处理程序（✔）
+
+// 3.  $("this")是使用标签选择器，查找名为this的标签（✔）
+
+// 4.  nextAll() 不能替代$('prev~siblindgs')选择器（×）
+
+// 5.   在一个网页中一个Id可以用很多次（×）
+
+// 6.   在jquery中可以用 replaceWith() 和 replaceAll() 替换节点（✔）
+
+// 7.   $('prev~div') 能选择'所有的的同辈<div>元素  （×）
+
+// 8.   jQuery中addClass()方法 可以来设置和获取 样式 （✔）
+
+// 9.   $.getScript()方法可以加载.js文件，需要对javascript文件进行处理 （×）
+
+// 10. delegate() 方法为指定的元素（属于被选元素的子元素）添加一个或多个事件处理程序，并规定当这些事件发生时运行的函数（✔）
+
+// 11.  jquery的load()方法中data 参数是必须的（×）
+
+// 12.  nextAll() 方法返回被选元素的所有跟随的同胞元素（✔）
+
+// 13.  parent() 方法返回被选元素的所有祖先元素，它一路向上直到文档的根元素（×）
+
+// 14.  toggle() 方法在被选元素上进行 hide() 和 show() 之间的切换。（✔）
+
+// 15.  $('div > span').css('color', '#FF0000');的作用是选取div下的所有span元素，将字体颜色设为红色（×）
+
+// 16.  jQuery是一个javascript库（✔）
+
+// 17.  通过 jQuery，$("div.intro") 能够选取的元素是class="intro" 的首个 div 元素（×）
+
+// 18. jQuery.ajaxAsync()方法用于执行异步 HTTP 请求（×）
+
+// 19.    jQuery 是 W3C 标准（×）
+
+// 20.  jQueryget请求会将参数跟在URL后进行传递，而POST请求则是作为HTTP消息的实体内容发送给Web服务器的，这种传递是对用户不可见的。（✔）
+
+// 四．简答题
+
+// 1.什么是jQuery?
+// 答案：jQuery是继prototype之后又一个优秀的Javascrīpt框架
+
+// 2.简述domready和onload事件的区别？图片的onloaddomready页面onload的先后顺序，并简述原因。
+
+ 
+
+// 答案：domready在DOM加载完毕时触发；onload在页面所有元素都已经准备好时触发，包括图片、脚本、样式，首先domready，其次图片的onload，最后页面的onload
+
+// 3.请解释 XMLHttpRequest 对象，并简要说明 jQuery 中的 $.ajax 方法使用。
+
+
+// 答案：XMLHttpRequest对象为我们提供了一个访问http协议的接口，可以与服务器交互数据，实现页面的局部刷新。$.ajax是JQ中封装好的使用ajax的方法，使用时传入URL、数据类型、失败成功的调用函数等等；
+//       $.ajax({
+//         url:'',
+//         type:'get/post',
+//         data:{},
+//         dataType:'',
+//         success:function(data){
+//          //....
+//          }
+//        });
+
+// 4.图片懒加载技术会让图片进入视野之后延迟一小段时间才让用户看到图片，体验不好。如何改进？
+
+// 答案：图片预加载，将所有图片设定一个src，提前缓存在本地，当用户需要的时候直接从本地加载。牺牲了性能换得了更好的用户体验.
+
+ 
+
+// 5. jquery中的选择器 和 css中的选择器有区别吗？     
+
+// 答案：jQuery选择器支持CSS里的选择器，jQuery选择器可用来添加样式和添加相应的行为，CSS 中的选择器是只能添加相应的样式
+
+ 
+
+// 6. jquery中$.get()提交和$.post()提交有区别吗？     
+
+// 答:        1 $.get() 方法使用GET方法来进行异步请求的。      $.post() 方法使用POST方法来进行异步请求的。      2 get请求会将参数跟在URL后进行传递，而POST请求则是作为HTTP消息的实体         内容发送给Web服务器的，这种传递是对用户不可见的。     3 get方式传输的数据大小不能超过2KB 而POST要大的多      4 GET 方式请求的数据会被浏览器缓存起来，因此有安全问题。 
+
+    
+
+// 7. 如何来设置和获取HTML 和文本的值？    
+
+// 答案：html()方法 类似于innerHTML属性 可以用来读取或者设置某个元素中的HTML内容           注意：html() 可以用于xhtml文档 不能用于xml文档           text()类似于innerText属性 可以用来读取或设置某个元素中文本内容。        val() 可以用来设置和获取元素的值
+
+ 
+
+// 8. 选择器中 id，class有什么区别？    
+
+// 答案：在网页中 每个id名称只能用一次，class可以允许重复使用 
+
+ 
+
+// 9. .jquery表单提交前有几种校验方法？分别为？？      
+
+// 答案：formData:返回一个数组，可以通过循环调用来校验    jaForm：返回一个jQuery对象，所有需要先转换成dom对象       fieldValue：返回一个数组    beforeSend()     
+
+ 
+
+// 10. jQuery的美元符号$有什么作用？
+
+// 答案：其实美元符号$只是”jQuery”的别名，它是jQuery的选择器，如下代码：
+
+// Html代码
+
+// $(document).ready(function(){ });
+
+// 当然你也可以用jQuery来代替$，如下代码：
+
+// Html代码
+
+// jQuery(document).ready(function(){});
+
+// jQuery中就是通过这个美元符号来实现各种灵活的DOM元素选择的，例如$(“#main”)即选中id为main的元素。
+
+ 
+
+// 11. window.onload()函数和jQuery中的document.ready()有什么区别？
+
+// 答案：1.执行时间
+
+//         window.onload必须等到页面内包括图片的所有元素加载完毕后才能执行。
+
+//         $(document).ready()是DOM结构绘制完毕后就执行，不必等到加载完毕。
+
+//         $(document).ready()在 window.onload之前执行
+
+// 2.编写个数不同
+
+//      window.onload不能同时编写多个，如果有多个window.onload方法，只会执行一个
+
+//      $(document).ready()可以同时编写多个，并且都可以得到执行
+
+// 3.简化写法
+
+//          window.onload没有简化写法
+
+//         $(document).ready(function(){})可以简写成$(function(){});
+
+// 4.浏览器兼容性
+
+//       $(document).ready()可以跨浏览器，例如在使用ajax请求的时候自动会处理兼容
+
+// 5.出现地方不同
+
+//       window.onload是js标准，可出现在任何js脚本中
+
+//       $(document).ready只有在jq库中出现
+
+ 
+// 12. 编写一段代码请使用jQuery将页面上的所有元素边框设置为2px宽的虚线？
+// 答案：<script language="javascript" type="text/javascript">
+
+//        $("*").css("border", "2px dotted red"); 
+
+
+
+
+
+</script>
+</html>

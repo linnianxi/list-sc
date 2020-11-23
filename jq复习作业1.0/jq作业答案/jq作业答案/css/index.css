@@ -1,0 +1,11 @@
+.mydeleteBtn{
+  color: red;
+  border: 1px solid red;
+  margin: 0 10px;
+}
+.mydeleteBtn:hover{
+  color: red;
+}
+.myeditBtn{
+  border: 1px solid #ccc
+}

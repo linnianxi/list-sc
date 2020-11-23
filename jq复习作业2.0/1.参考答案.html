@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>It's written by wjn</title>
+</head>
+
+<body>
+
+</body>
+<script>
+// 一、选择题答案:
+// 1、C
+// 2、C
+// 3、D
+// 4、C
+// 5、B
+// 6、C
+// 7、D
+// 8、C
+// 9、D
+// 10、A
+// 11、B
+// 12、D
+// 13、C
+// 14、D
+// 15、ABD
+// 16、C
+// 17、A
+// 18、C
+// 19、B
+// 20、B
+// 21、B
+// 22、AB
+// 23、D
+// 24、B
+// 25、D
+// 26、C
+// 27、D
+// 28、B
+// 29、D
+// 30、C
+//二、填空题：
+// 1、 length
+// 2、 $(this)[0])
+// 3、 even  odd
+// 4、 first  eq(1)
+// 5、 is(expr)  false
+// 6、 offset  top  left
+// 7、 $("div").css( "color","green")
+// 8、 $(selector).hover(inFunction,outFunction)
+// 9、 hide()  show()
+// 10、$("div:has(span)")
+// 11、$("li:last")
+// 12、$("li:first-child").hide()
+// 13、$("forminput:checked").hide()
+// 14、hover()
+// 15、stopPropagation()
+// 16、event.preventDefault()
+// 17、html()
+// 18、基本选择器，层次选择器，过滤选择器，表单选择器
+
+//判断题：
+// 1、true
+// 2、true
+// 3、true
+// 4、false
+// 5、true
+// 6、false
+// 7、true
+// 8、false
+// 9、true
+// 10、false
+// 11、true
+// 12、false
+// 13、true
+// 14、false
+// 15、true
+// 16、false
+// 17、false
+// 18、true
+</script>
+<script>
+//简答题：
+
+// 1.答案：jQuery是继prototype之后又一个优秀的Javascrīpt框架
+
+// 2.答案：domready在DOM加载完毕时触发；onload在页面所有元素都已经准备好时触发，包括图片、脚本、样式，首先domready，其次图片的onload，最后页面的onload
+
+// 3.答案：XMLHttpRequest对象为我们提供了一个访问http协议的接口，可以与服务器交互数据，实现页面的局部刷新。$.ajax是JQ中封装好的使用ajax的方法，使用时传入URL、数据类型、失败成功的调用函数等等；
+//       $.ajax({
+//         url:'',
+//         type:'get/post',
+//         data:{},
+//         dataType:'',
+//         success:function(data){
+//          //....
+//          }
+//        });
+
+// 4.答案：图片预加载，将所有图片设定一个src，提前缓存在本地，当用户需要的时候直接从本地加载。牺牲了性能换得了更好的用户体验.   
+
+// 5.答案：jQuery选择器支持CSS里的选择器，jQuery选择器可用来添加样式和添加相应的行为，CSS 中的选择器是只能添加相应的样式
+
+// 6.答案: 1 $.get() 方法使用GET方法来进行异步请求的。 $.post() 方法使用POST方法来进行异步请求的。 2 get请求会将参数跟在URL后进行传递，而POST请求则是作为HTTP消息的实体         内容发送给Web服务器的，这种传递是对用户不可见的。     3 get方式传输的数据大小不能超过2KB 而POST要大的多      4 GET 方式请求的数据会被浏览器缓存起来，因此有安全问题。 
+
+// 7.答案：html()方法 类似于innerHTML属性 可以用来读取或者设置某个元素中的HTML内容           注意：html() 可以用于xhtml文档 不能用于xml文档           text()类似于innerText属性 可以用来读取或设置某个元素中文本内容。        val() 可以用来设置和获取元素的值
+
+// 8.答案：在网页中 每个id名称只能用一次，class可以允许重复使用 
+
+// 9.答案：formData:返回一个数组，可以通过循环调用来校验    jaForm：返回一个jQuery对象，所有需要先转换成dom对象       fieldValue：返回一个数组    beforeSend()     
+
+// 10.答案：其实美元符号$只是”jQuery”的别名，它是jQuery的选择器，如下代码：
+
+// Html代码
+
+// $(document).ready(function(){ });
+
+// 当然你也可以用jQuery来代替$，如下代码：
+
+// Html代码
+
+// jQuery(document).ready(function(){});
+
+// jQuery中就是通过这个美元符号来实现各种灵活的DOM元素选择的，例如$(“#main”)即选中id为main的元素。
+
+// 11.答案：1.执行时间
+
+//         window.onload必须等到页面内包括图片的所有元素加载完毕后才能执行。
+
+//         $(document).ready()是DOM结构绘制完毕后就执行，不必等到加载完毕。
+
+//         $(document).ready()在 window.onload之前执行
+
+// 2.编写个数不同
+
+//      window.onload不能同时编写多个，如果有多个window.onload方法，只会执行一个
+
+//      $(document).ready()可以同时编写多个，并且都可以得到执行
+
+// 3.简化写法
+
+//          window.onload没有简化写法
+
+//         $(document).ready(function(){})可以简写成$(function(){});
+
+// 4.浏览器兼容性
+
+//       $(document).ready()可以跨浏览器，例如在使用ajax请求的时候自动会处理兼容
+
+// 5.出现地方不同
+
+//       window.onload是js标准，可出现在任何js脚本中
+
+//       $(document).ready只有在jq库中出现
+
+
+// 12.答案： $("*").css("border", "2px dotted red"); 
+</script>
+</html>
